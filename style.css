@@ -1,0 +1,156 @@
+/*бряка*/
+	html, body, div, span, applet, object, iframe,
+	h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+	a, abbr, acronym, address, big, cite, code,
+	del, dfn, em, img, ins, kbd, q, s, samp,
+	small, strike, strong, sub, sup, tt, var,
+	b, u, i, center,
+	dl, dt, dd, ol, ul, li,
+	fieldset, form, label, legend,
+	table, caption, tbody, tfoot, thead, tr, th, td,
+	article, aside, canvas, details, embed, 
+	figure, figcaption, footer, header, hgroup, 
+	menu, nav, output, ruby, section, summary,
+	time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	}
+	/* HTML5 display-role reset for older browsers */
+	article, aside, details, figcaption, figure, 
+	footer, header, hgroup, menu, nav, section {
+	display: block;
+	}	
+	body {
+	line-height: 1;
+	}
+	ol, ul {
+	list-style: none;
+	}
+	blockquote, q {
+	quotes: none;
+	}
+	blockquote:before, blockquote:after,
+	q:before, q:after {
+	content: '';
+	content: none;
+	}
+	table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	}
+
+
+/*основной*/
+	.main {width: 1200px;
+		 margin: 0 auto;
+		  border: 5px solid red;
+		  background: silver;
+		position: relative;
+		text-align:center;
+	}
+	textarea{
+		width: 300px;
+		height: 200px;
+	}
+	.swich{
+		height: 200px;
+		width: 400px;
+		background: grey;
+		border: 5px solid green;
+		border-radius: 100px;
+		position: relative;
+		/*transition: all 2s ease;*/
+	}
+	.some_swich{
+		display: none;
+	}
+
+	.checkbox_lable{
+		height: 180px;
+		width: 180px;
+		background: red;
+		border: 5px solid lime;
+		border-radius: 100px;
+		margin-top: 5px;
+		position: absolute;	
+		/*z-index: 1;*/		
+		right:calc(100% - 190px);
+		transition: all 2s ease;
+		cursor: pointer;
+	}
+
+	.some_swich:checked+.checkbox_lable {
+right: 0px;
+background: blue;
+		border: 5px solid blue;
+transition: all 2s ease;
+
+	}
+		.some_swich:checked .swich{
+		height: 200px;
+		width: 400px;
+		background: red;
+		border: 5px solid green;
+		border-radius: 100px;
+		position: relative;
+		/*transition: all 2s ease;*/
+	}
+
+	.some_list {
+		/*content: "";*/
+border: 1px solid grey;
+overflow: hidden; 
+height: 25px;    
+width: 100px;
+position: relative;
+display: block;
+/*background:white;*/
+margin: 0 auto;
+/*left: 100%;*/
+}	
+
+.some_list:after {
+content: "";
+overflow: hidden; 
+height: 25px;    
+width:20px;
+
+position: absolute;
+background:white;
+left: calc(100% - 20px);
+pointer-events:none;
+/*border: 1px solid grey;*/
+/*outline: 2px solid grey;*/
+
+}
+.some_list:before {
+	content: "";
+height: 10px;    
+width:10px;
+background:black;
+border-radius: 50%;
+position: absolute;
+left: calc(100% - 20px);
+z-index: 2;
+margin:8px 5px;
+pointer-events:none;
+
+}
+
+
+ select{       
+height: 25px;
+padding: 5px;
+/*border: 0;*/
+font-size: 13px;       
+width: 100px;
+}
+
+
+textarea::-moz-placeholder {color: red;} 
+textarea::-webkit-input-placeholder {color: red;} 
+textarea::-ms-placeholder {color: red;} 
